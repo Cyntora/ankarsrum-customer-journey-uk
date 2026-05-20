@@ -300,6 +300,10 @@ p.lead { font-size: 26px; line-height: 1.35; font-weight: 300; max-width: 1200px
 .closing .closing-foot { display: flex; justify-content: space-between; align-items: flex-end; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cream-bright); opacity: 0.72; }
 .closing .tagline { font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 300; margin-top: 32px; color: var(--cream-bright); opacity: 0.8; max-width: 760px; }
 
+/* PAGE-FLOW under journey steps */
+.step-page-flow { font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.04em; margin: 6px 0 12px; padding: 6px 10px; background: rgba(193, 106, 69, 0.12); color: var(--copper-deep); border-radius: 4px; word-break: break-word; line-height: 1.4; max-width: 220px; }
+.slide.dark .step-page-flow { background: rgba(224, 138, 101, 0.20); color: var(--copper-bright); }
+
 /* PRINT */
 @page { size: 423.33mm 238.13mm; margin: 0; }
 @media print {
@@ -380,65 +384,67 @@ p.lead { font-size: 26px; line-height: 1.35; font-weight: 300; max-width: 1200px
     <div class="meta"><span>03</span><span>Three markets, side by side</span></div>
   </div>
 
-  <span class="label">Where the UK sits today</span>
-  <h2>Sweden and the US are <span style="font-style: italic; color: var(--sage-deep);">mature</span>.<br>The UK is <span style="font-style: italic; color: var(--copper);">early</span>.</h2>
+  <span class="label">Where the UK sits in your portfolio</span>
+  <h2><span style="font-style: italic; color: var(--sage-deep);">Mature</span> markets buy. <span style="font-style: italic; color: var(--copper);">New starter</span> markets explore.<br>The UK is <span style="font-style: italic; color: var(--copper-deep);">earlier still</span>.</h2>
   <div class="divider"></div>
 
   <div class="compare-three">
     <div class="market-col">
       <div class="market-tag">Mature</div>
-      <div class="market-name">Sweden</div>
+      <div class="market-name">Sweden + Germany</div>
       <span class="market-status">Established flow</span>
 
       <div class="scale-vis">
-        <div class="scale-bar-wrap"><div class="scale-bar" style="width: 66%;"></div></div>
-        <div class="scale-bar-lbl">524k sessions, relative scale</div>
+        <div class="scale-bar-wrap"><div class="scale-bar" style="width: 79%;"></div></div>
+        <div class="scale-bar-lbl">Combined 624k sessions a year</div>
       </div>
 
       <div class="market-stats">
-        <div class="ms-row"><span class="ms-lbl">Purchases</span><span class="ms-val">2,029</span></div>
-        <div class="ms-row"><span class="ms-lbl">Revenue</span><span class="ms-val">6.5m SEK</span></div>
-        <div class="ms-row"><span class="ms-lbl">Brand position on Google</span><span class="ms-val">2.3</span></div>
-        <div class="ms-row"><span class="ms-lbl">Direct share of traffic</span><span class="ms-val">10%</span></div>
+        <div class="ms-row"><span class="ms-lbl">Purchases (combined)</span><span class="ms-val">3,629</span></div>
+        <div class="ms-row"><span class="ms-lbl">Brand awareness</span><span class="ms-val">High</span></div>
+        <div class="ms-row"><span class="ms-lbl">Customer behaviour</span><span class="ms-val">Buying</span></div>
+        <div class="ms-row"><span class="ms-lbl">Typical channel mix</span><span class="ms-val">Direct, Organic</span></div>
       </div>
     </div>
 
     <div class="market-col">
-      <div class="market-tag">Mature</div>
-      <div class="market-name">USA</div>
-      <span class="market-status">Established flow</span>
+      <div class="market-tag">New starter</div>
+      <div class="market-name">USA + Canada</div>
+      <span class="market-status">Building flow</span>
 
       <div class="scale-vis">
         <div class="scale-bar-wrap"><div class="scale-bar" style="width: 100%;"></div></div>
-        <div class="scale-bar-lbl">793k sessions, relative scale</div>
+        <div class="scale-bar-lbl">Combined ~890k sessions a year</div>
       </div>
 
       <div class="market-stats">
-        <div class="ms-row"><span class="ms-lbl">Purchases</span><span class="ms-val">8,613</span></div>
-        <div class="ms-row"><span class="ms-lbl">Revenue</span><span class="ms-val">$4.5m</span></div>
-        <div class="ms-row"><span class="ms-lbl">Brand position on Google</span><span class="ms-val">3.9</span></div>
-        <div class="ms-row"><span class="ms-lbl">Direct share of traffic</span><span class="ms-val">43%</span></div>
+        <div class="ms-row"><span class="ms-lbl">Purchases (combined)</span><span class="ms-val">8,800+</span></div>
+        <div class="ms-row"><span class="ms-lbl">Brand awareness</span><span class="ms-val">Growing</span></div>
+        <div class="ms-row"><span class="ms-lbl">Customer behaviour</span><span class="ms-val">Exploring</span></div>
+        <div class="ms-row"><span class="ms-lbl">Typical channel mix</span><span class="ms-val">Paid + Direct</span></div>
       </div>
     </div>
 
     <div class="market-col featured">
-      <div class="market-tag">Emerging</div>
-      <div class="market-name">UK</div>
+      <div class="market-tag">Outlier</div>
+      <div class="market-name">United Kingdom</div>
       <span class="market-status">Still being built</span>
 
       <div class="scale-vis">
         <div class="scale-bar-wrap"><div class="scale-bar" style="width: 3.6%;"></div></div>
-        <div class="scale-bar-lbl">29k sessions, relative scale</div>
+        <div class="scale-bar-lbl">29k sessions a year</div>
       </div>
 
       <div class="market-stats">
         <div class="ms-row"><span class="ms-lbl">Purchases</span><span class="ms-val">139</span></div>
-        <div class="ms-row"><span class="ms-lbl">Revenue</span><span class="ms-val">£70k</span></div>
-        <div class="ms-row"><span class="ms-lbl">Brand position on Google</span><span class="ms-val">5.7</span></div>
-        <div class="ms-row"><span class="ms-lbl">Direct share of traffic</span><span class="ms-val">19%</span></div>
+        <div class="ms-row"><span class="ms-lbl">Brand awareness</span><span class="ms-val">Low</span></div>
+        <div class="ms-row"><span class="ms-lbl">Customer behaviour</span><span class="ms-val">Verifying</span></div>
+        <div class="ms-row"><span class="ms-lbl">Typical channel mix</span><span class="ms-val">Paid-led</span></div>
       </div>
     </div>
   </div>
+
+  <p style="text-align: center; max-width: 1200px; margin: 28px auto 0; font-size: 16px; color: var(--ink-soft); font-style: italic;">The UK does not yet behave like either a mature market or a new starter. It is still in the verification phase, where visitors check whether the brand is real and available locally.</p>
 </section>
 
 <!-- 04 WHO -->
@@ -501,6 +507,7 @@ p.lead { font-size: 26px; line-height: 1.35; font-weight: 300; max-width: 1200px
         <div class="step-icon"><svg><use href="#i-search"/></svg></div>
         <div class="step-title">Discovery</div>
         <div class="step-channel">Google, paid + organic</div>
+        <div class="step-page-flow">→ "ankarsrum mixer" search → paid ad or /uk/</div>
         <div class="step-stat">15.3k</div>
         <div class="step-stat-lbl">search sessions</div>
         <div class="friction-tag"><svg><use href="#i-warning"/></svg>Low awareness</div>
@@ -512,6 +519,7 @@ p.lead { font-size: 26px; line-height: 1.35; font-weight: 300; max-width: 1200px
         <div class="step-icon"><svg><use href="#i-pin"/></svg></div>
         <div class="step-title">Verify</div>
         <div class="step-channel">UK-specific queries</div>
+        <div class="step-page-flow">→ "ankarsrum uk" / "ankarsrum mixer uk" → /uk/</div>
         <div class="step-stat">854</div>
         <div class="step-stat-lbl">"ankarsrum uk" searches</div>
         <div class="friction-tag"><svg><use href="#i-warning"/></svg>"Are you real here?"</div>
@@ -523,6 +531,7 @@ p.lead { font-size: 26px; line-height: 1.35; font-weight: 300; max-width: 1200px
         <div class="step-icon"><svg><use href="#i-home"/></svg></div>
         <div class="step-title">Land</div>
         <div class="step-channel">UK home page</div>
+        <div class="step-page-flow">→ /uk/ → checks retailers + warranty</div>
         <div class="step-stat">9,728</div>
         <div class="step-stat-lbl">home sessions</div>
         <div class="opportunity-tag"><svg><use href="#i-star"/></svg>Best converter at 0.6%</div>
@@ -534,6 +543,7 @@ p.lead { font-size: 26px; line-height: 1.35; font-weight: 300; max-width: 1200px
         <div class="step-icon"><svg><use href="#i-box"/></svg></div>
         <div class="step-title">Browse</div>
         <div class="step-channel">Category + sale page</div>
+        <div class="step-page-flow">→ /uk/product-category/stand-mixers/ or /sale/</div>
         <div class="step-stat">2,579</div>
         <div class="step-stat-lbl">category sessions</div>
         <div class="friction-tag"><svg><use href="#i-warning"/></svg>Sale page 0% conversion</div>
@@ -545,6 +555,7 @@ p.lead { font-size: 26px; line-height: 1.35; font-weight: 300; max-width: 1200px
         <div class="step-icon"><svg><use href="#i-cart"/></svg></div>
         <div class="step-title">Purchase</div>
         <div class="step-channel">Checkout</div>
+        <div class="step-page-flow">→ /uk/checkout/ → confirmation</div>
         <div class="step-stat">139</div>
         <div class="step-stat-lbl">purchases · £70k</div>
         <div class="opportunity-tag"><svg><use href="#i-star"/></svg>Average order £503</div>

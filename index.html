@@ -300,6 +300,22 @@ p.lead { font-size: 26px; line-height: 1.35; font-weight: 300; max-width: 1200px
 .closing .closing-foot { display: flex; justify-content: space-between; align-items: flex-end; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cream-bright); opacity: 0.72; }
 .closing .tagline { font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 300; margin-top: 32px; color: var(--cream-bright); opacity: 0.8; max-width: 760px; }
 
+/* DUAL-SOURCE PARADOX (Meta vs GA4) */
+.paradox-layout { flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 16px; align-items: stretch; }
+.paradox-card { background: var(--cream-bright); border: 2px solid var(--divider); border-radius: 12px; padding: 36px 32px; display: flex; flex-direction: column; position: relative; }
+.paradox-card.metas-view { border-color: var(--sage-deep); }
+.paradox-card.ga4-view { border-color: var(--copper-deep); }
+.paradox-card.unavailable { border-color: var(--copper); border-style: dashed; }
+.paradox-card .pc-label { font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700; color: var(--ink-soft); margin-bottom: 10px; }
+.paradox-card .pc-title { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 500; margin-bottom: 24px; line-height: 1.1; color: var(--ink); }
+.paradox-card .pc-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px; }
+.paradox-card .pc-stat-val { font-family: 'Cormorant Garamond', serif; font-size: 44px; font-weight: 600; line-height: 1; color: var(--ink); }
+.paradox-card.metas-view .pc-stat-val.featured { color: var(--sage-deep); }
+.paradox-card.ga4-view .pc-stat-val.featured { color: var(--copper-deep); }
+.paradox-card.unavailable .pc-stat-val.muted { color: var(--ink-soft); font-style: italic; font-size: 28px; }
+.paradox-card .pc-stat-lbl { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; color: var(--ink-soft); margin-top: 6px; }
+.paradox-card p { font-size: 14px; line-height: 1.55; margin-top: auto; color: var(--ink); }
+
 /* PAGE-FLOW under journey steps */
 .step-page-flow { font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.04em; margin: 6px 0 12px; padding: 6px 10px; background: rgba(193, 106, 69, 0.12); color: var(--copper-deep); border-radius: 4px; word-break: break-word; line-height: 1.4; max-width: 220px; }
 .slide.dark .step-page-flow { background: rgba(224, 138, 101, 0.20); color: var(--copper-bright); }
@@ -752,43 +768,53 @@ p.lead { font-size: 26px; line-height: 1.35; font-weight: 300; max-width: 1200px
     <div class="meta"><span>08</span><span>The paid social problem</span></div>
   </div>
 
-  <span class="label">Where the spending isn't returning</span>
-  <h2>Three thousand visits. One purchase.</h2>
+  <span class="label">The same channel, measured two ways</span>
+  <h2>Meta reaches the audience.<br>We can't yet see if it converts.</h2>
   <div class="divider"></div>
 
-  <div class="blackhole-layout">
-    <div class="blackhole-visual">
-      <div class="bh-icon-wrap"><svg><use href="#i-leak"/></svg></div>
-      <div class="blackhole-stats">
+  <div class="paradox-layout">
+    <div class="paradox-card unavailable">
+      <div class="pc-label">What Meta reports</div>
+      <div class="pc-title">From the ad platform</div>
+      <div class="pc-stats">
         <div>
-          <div class="bh-stat-num">89,290</div>
-          <div class="bh-stat-lbl">SEK spent on Meta</div>
-          <div class="bh-stat-sub">over twelve months for the UK market</div>
+          <div class="pc-stat-val featured" style="color: var(--ink);">89,290</div>
+          <div class="pc-stat-lbl">SEK spent</div>
         </div>
         <div>
-          <div class="bh-stat-num">5.66m</div>
-          <div class="bh-stat-lbl">impressions delivered</div>
-          <div class="bh-stat-sub">across Facebook and Instagram</div>
+          <div class="pc-stat-val featured" style="color: var(--ink);">2.86m</div>
+          <div class="pc-stat-lbl">unique people reached</div>
         </div>
-        <div>
-          <div class="bh-stat-num">3,013</div>
-          <div class="bh-stat-lbl">sessions reached the site</div>
-          <div class="bh-stat-sub">from those impressions</div>
-        </div>
-        <div>
-          <div class="bh-stat-num bad">1</div>
-          <div class="bh-stat-lbl">purchase attributed</div>
-          <div class="bh-stat-sub">a conversion rate of 0.03 percent</div>
+        <div style="grid-column: 1 / -1; margin-top: 8px;">
+          <div class="pc-stat-val muted">Not available</div>
+          <div class="pc-stat-lbl">Meta-attributed purchases and ROAS</div>
         </div>
       </div>
+      <p>Meta's own conversion attribution is not surfaced via the current reporting API for this account. We can see Meta is reaching the UK audience at scale, but cannot independently verify Meta's conversion claim.</p>
     </div>
 
-    <div class="blackhole-narrative">
-      <div class="pull-quote">Meta is reaching the audience.<br>The audience is not reaching the checkout.</div>
-      <p>Paid Social in the UK is doing brand exposure work at scale. 2.86 million people saw the ads. Almost none of them came to the site to buy.</p>
-      <p style="margin-top: 14px;">In a mature market, this would be a creative and landing-page problem. In an emerging market like the UK, it points at something more fundamental: the brand is not familiar enough yet for a Meta impression to convert into a click into a purchase on the same visit. Paid Social belongs further up the funnel here.</p>
+    <div class="paradox-card ga4-view">
+      <div class="pc-label">What your site sees</div>
+      <div class="pc-title">From Google Analytics</div>
+      <div class="pc-stats">
+        <div>
+          <div class="pc-stat-val featured">1</div>
+          <div class="pc-stat-lbl">purchase attributed</div>
+        </div>
+        <div>
+          <div class="pc-stat-val featured">0.03%</div>
+          <div class="pc-stat-lbl">conversion rate</div>
+        </div>
+        <div style="grid-column: 1 / -1; margin-top: 8px;">
+          <div class="pc-stat-val">3,013</div>
+          <div class="pc-stat-lbl">sessions arriving from Paid Social</div>
+        </div>
+      </div>
+      <p>GA4 uses last non-direct. It only counts conversions where Paid Social was the last paid touchpoint. By that measure Paid Social produces almost none of the on-site purchases.</p>
     </div>
   </div>
+
+  <p style="text-align: center; max-width: 1200px; margin: 24px auto 0; font-size: 16px; color: var(--ink-soft);">Both views are partial. Meta-side conversion data is not available for the UK account through current reporting access. GA4 shows the on-site close but not the assisted contribution. Before deciding to scale or pull back on Meta in the UK, set up direct measurement so the decision is based on data, not assumption.</p>
 </section>
 
 <!-- 09 RECS -->
@@ -811,9 +837,9 @@ p.lead { font-size: 26px; line-height: 1.35; font-weight: 300; max-width: 1200px
 
     <div class="rec-card">
       <div class="rec-num-circle">2</div>
-      <h3>Reframe Paid Social as awareness</h3>
-      <p>Stop measuring UK Meta against direct purchase. With 0.03 percent conversion the platform is currently not a sales channel. Use it for reach, video views, and email capture. Build a UK-specific newsletter audience over the next six months, then measure the conversion lift through email and direct visits.</p>
-      <span class="rec-tag">Reframe · Better expectations</span>
+      <h3>Set up Meta measurement before deciding</h3>
+      <p>Meta delivers 2.86M unique reach in the UK for 89,290 SEK. Meta-attributed conversion data is not currently visible to us through the reporting API. GA4 sees 1 purchase. We cannot say if Meta is or isn't a sales channel for UK without proper measurement. Set up enhanced conversions, CAPI, or a brand-lift study before any decision to scale or pull back on Meta spend.</p>
+      <span class="rec-tag">Measurement first · Decide after</span>
     </div>
 
     <div class="rec-card">
